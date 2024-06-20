@@ -52,10 +52,11 @@ console.log(geMostFrequent(string));
 // string "The quick brown fox jumps over the lazy dog" is a pangram, while
 // "Hello, world!" is not.
 
-function isPangram(alphabets, pangram) {
+function isPangram(pangram) {
+    const alphabets = "abcdefghijklmnopqrstuvwxyz";
   const alphabetArray = alphabets.split("");
   const pangramArray = pangram.split("");
-  const isPan = true;
+  let isPan = true;
   alphabetArray.forEach((alphabet) => {
     if (!pangramArray.includes(alphabet)) {
       isPan = false;
@@ -64,9 +65,9 @@ function isPangram(alphabets, pangram) {
 
   return isPan;
 }
-let pangram = "The quick brown fox jumps over the lazy dog";
-let alphabets = "abcdefghijklmnopqrstuvwxyz";
-console.log(isPangram(alphabets, pangram));
+
+let pangram = "The quick brown fox jumps over the lazy dog"
+console.log(isPangram(pangram));
 
 // Design a function that takes a list of integers as input. The function should
 // return True if the list contains two consecutive threes (3 next to a 3) anywhere
